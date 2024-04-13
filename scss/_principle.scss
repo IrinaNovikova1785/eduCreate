@@ -1,0 +1,88 @@
+.principle{
+    .title{
+        margin-bottom: 40px;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        border-top: #2e2e2e 1px solid;
+    }
+    &__item{
+        @include fluid(padding-top, 30px, 40px);
+        @include fluid(padding-bottom, 30px, 40px);
+        display: flex;
+        align-items: flex-start;
+        border-bottom: #2e2e2e 1px solid;
+        &-text{
+            .title{
+                @include fluid(font-size, 28px, 40px);
+                margin-bottom: 0;
+            }
+            p{
+                display: none;
+                max-width: 650px;
+                font-size: 18px;
+                line-height: 1.6;
+                margin-top: 30px;
+            }
+        }
+        span{
+            display: block;
+            position: relative;
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            border-radius: 50%;
+            background-color: #ececec;
+            transition: .38s ease-in-out;
+            &::after, &::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                background-color: #2e2e2e;
+                transition: .38s ease-in-out;
+            }
+            &::after{
+                width: 1px;
+                height: 25px;
+            }
+            &::before{
+                height: 1px;
+                width: 25px;
+            }
+            &.active{
+                rotate: 45deg;
+                background-color: #2e2e2e;
+                &::after, &::before{
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .principle{
+        &__item{
+            &-text{
+                .title{
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .principle{
+        &__item{
+            &-text{
+                .title{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

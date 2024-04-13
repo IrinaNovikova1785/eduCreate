@@ -1,0 +1,18 @@
+.userNav{
+    &__wrapper{
+        padding: 20px 0;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            li a{
+                @include fluid(font-size, 18px, 20px);
+                text-transform: uppercase;
+                &.active{
+                    background-color: #2e2e2e;
+                    color: #FFF;
+                }
+            }
+        } 
+    }
+}

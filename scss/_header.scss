@@ -1,0 +1,86 @@
+.header{
+    @include fluid(padding-top, 20px, 40px);
+    @include fluid(padding-bottom, 20px, 40px);
+    @include fluid(padding-left, 15px, 30px);
+    @include fluid(padding-right, 15px, 30px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--white{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        .logotype, .nav ul li a{
+            color: #FFF;
+        }
+        .header{
+            &__btn{
+                background-color: #FFF;
+                color: #000022;
+            }
+        }
+    }
+}
+.nav{
+    &--footer{
+        ul li{
+            @include fluid(font-size, 14px, 16px);
+            color: #606366;
+            transition: color .38s ease-in-out;
+        }
+        &:hover{
+            color: #FFF;
+        }
+    }
+    ul{
+        @include fluid(gap, 15px, 30px);
+        display: flex;
+        li{
+            font-family: "Raleway";
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+}
+.logotype{
+    text-transform: uppercase;
+    font-size: 24px;
+    span{
+        font-weight: 600;
+    }
+    &--footer{
+        color: #FFF;
+    }
+}
+
+.btn{
+    padding: 10px 30px;
+    color: #ffffff;
+    border: 1px solid #222222;
+    background-color: #222222;
+    transition: all 0.38s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        color: #222222;
+        background-color: #ffffff;
+    }
+}
+
+.container{
+    @include container;
+}
+
+@media (max-width: 540px) {
+    .header{
+        flex-wrap: wrap;
+        row-gap: 25px;
+    }
+    .nav--header{
+        width: 100%;
+        order: 3;
+        ul{
+            justify-content: center;
+        }
+    }
+}

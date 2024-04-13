@@ -1,0 +1,16 @@
+.title{
+    @include fluid(font-size, 45px, 60px);
+    font-family: 'Proxima Nova';
+    font-weight: 500;
+    text-transform: uppercase;
+}
+@media (max-width: 992px) {
+    .title{
+        font-size: 39px;
+    }
+}
+@media (max-width: 576px) {
+    .title{
+        font-size: 32px;
+    }
+}

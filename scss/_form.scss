@@ -1,0 +1,58 @@
+.feedback{
+    @include fluid(margin-top, 60px, 120px);
+    &--grey{
+        @include fluid(padding-top, 60px, 120px);
+        @include fluid(padding-bottom, 60px, 120px);
+        background-color: #efefef;
+    }
+    &__form{
+        @include fluid(margin-top, 30px, 60px);
+        @include fluid(gap, 20px, 25px);
+        padding-left: 200px;
+        padding-right: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__agree{
+        text-align: center;
+        line-height: 1.55;
+    }
+    &__title{
+        @include font(#222222, 24px, 22px, 400);
+        text-align: center;
+    }
+    &__label{
+        @include font(#222222, 18px, 16px, 400);
+    }
+    &__input{
+        border: 1px solid #000000;
+        padding: 20px;
+        margin-top: 5px;
+        width: 100%;
+    }
+    &__btn{
+        width: 200px;
+        margin: 0 auto;
+    }
+    textarea{
+        resize: none;
+        height: 102px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .feedback{
+        &__form{
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .feedback{
+        &__btn{
+            width: 100%;
+        }
+    }
+}

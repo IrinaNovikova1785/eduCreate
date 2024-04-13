@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximaNova/ProximaNova-Black.woff') format("woff"), url('../fonts/proximaNova/ProximaNova-Black.woff2') format("woff2");
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximaNova/ProximaNova-Bold.woff') format("woff"), url('../fonts/proximaNova/ProximaNova-Black.woff2') format("woff2");
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway/Raleway-Regular.woff') format("woff"), url('../fonts/raleway/Raleway-Regular.woff2') format("woff2");
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximaNova/ProximaNova-Light.woff') format("woff"), url('../fonts/proximaNova/ProximaNova-Light.woff2') format("woff2");
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+  }

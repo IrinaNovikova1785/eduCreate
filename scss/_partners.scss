@@ -1,0 +1,99 @@
+.partners{
+    @include fluid(margin-top, 40px, 100px);
+    @include fluid(margin-bottom, 40px, 100px);
+    .title{
+        // font-size: 30px;
+        margin-bottom: 40px;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 40px;
+        counter-reset: num;
+        &--four{
+            @include fluid(row-gap, 40px, 80px);
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        height: 200px;
+        background-color: #ececec;
+        overflow: hidden;
+        &:hover{
+            .partners__img{
+                scale: 1.05;
+                filter: grayscale(0);
+            }
+        }
+    }
+    &__img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        filter: grayscale(100%);
+        transition: all .38s ease-in-out;
+    }
+    &__step{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+        gap: 24px;
+        &::after{
+            content: counter(num);// , decimal-leading-zero
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            counter-increment: num;
+            width: 26px;
+            height: 26px;
+            background-color: #2e2e2e;
+            border-radius: 50%;
+            color: #fff;
+        }
+        &-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .title{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .partners{
+        &__wrapper{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &__img{
+            filter: unset;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .partners{
+        &__wrapper{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media (max-width: 480px) {
+    .partners{
+        &__wrapper{
+            grid-template-columns: 1fr;
+        }
+        &__item{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}

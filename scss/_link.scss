@@ -1,0 +1,21 @@
+.link{
+    @include fluid(width, 120px, 180px);
+    @include fluid(height, 120px, 180px);
+    @include fontRaleway(#FFF, 18px, 16px, 400);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #222222 2px solid;
+    border-radius: 50%;
+    background: #222222;
+    transition: all .38s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        background: #FFF;
+        color: #222222;
+    }
+    &--mt{
+    @include fluid(margin-top, 60px, 100px);
+    }
+}

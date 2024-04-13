@@ -1,0 +1,92 @@
+.functional{
+    @include fluid(margin-top, 30px, 100px);
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 60px;
+        transition: all .38s ease-in-out;
+        &-left{
+            @include fluid(font-size, 39px, 50px);
+            @include fluid(gap, 60px, 90px);
+            display: flex;
+            align-items: center;
+            padding: 30px 0;
+            border-top: 1px solid #222222;
+            text-transform: uppercase;
+
+            width: 100%;
+            justify-content: center;
+            transition: all .38s ease-in-out;
+        }
+        &-right{
+            @include fluid(max-width, 400px, 560px);
+            transition: all .38s ease-in-out;
+        }
+        &:last-child{
+            .functional__item-left{
+                border-bottom: 1px solid #222222;
+            }
+        }
+        &:hover{
+            
+        }
+    }
+    &__circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 70px;
+        height: 70px;
+        background-color: #f0f0f0;
+        border-radius: 50%;
+        background-position: center center;
+        background-image: url('https://static.tildacdn.com/tild3538-6463-4462-b539-643738363663/Arrow_right.svg');
+    }
+}
+
+@media (max-width: 992px) {
+    .functional{
+        &__item{
+            flex-direction: column;
+            gap: 0;
+            padding-bottom: 30px;
+            &-left{
+                justify-content: space-between;
+            }
+            &-right{
+                max-width: unset;
+            }
+            &:last-child{
+                border-bottom: 1px solid #222222;
+                .functional__item{
+                    &-left{
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .functional{
+        &__item{
+            &-left{
+                font-size: 32px;
+                gap: 15px;
+                justify-content: space-between;
+            }
+        }
+        &__circle{
+            width: 60px;
+            height: 60px;
+        }
+    }
+}

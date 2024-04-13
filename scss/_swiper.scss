@@ -1,0 +1,103 @@
+.swiperMain{
+    &__img{
+        @include fluid(height, 700px, 1000px);
+        object-fit: cover;
+        width: 100%;
+    }
+    &__btn{
+        &-next, &-prev{
+            &::after{
+                color: #FFF;
+            }
+        }
+    }
+    &__pagination{
+        .swiper-pagination-bullet{
+            width: 20px;
+            &:not(&:last-child){
+                height: 20px;
+                border: #FFF 2px solid !important;
+                margin-right: 30px !important;
+            }
+            &-active{
+                padding: 5px;
+                position: relative;
+                background: transparent;
+                transition: all .38s ease-in-out;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #FFF;
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: all .38s ease-in-out;
+                }
+            }
+        }
+    }
+    &__slide{
+        position: relative;
+        // background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.90));
+    }
+    &__block{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.90));
+        gap: 20px;
+        padding-bottom: 75px;
+        align-items: center;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    &__title{
+        @include font(#FFF, 18px, 16px, 700);
+        text-transform: uppercase;
+        max-width: 960px;
+    }
+    &__text{
+        @include font(#FFF, 16px, 15px, 300);
+        text-align: center;
+        line-height: 150%;
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .swiperMain{
+        &__img{
+            height: 600px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .swiperMain{
+        &__img{
+            height: 500px;
+        }
+        &__pagination{
+            .swiper-pagination-bullet{
+                width: 15px;
+                height: 15px;
+                &:not(&:last-child){
+                    // height: 20px; 
+                    border: #FFF 1px solid !important;
+                    // margin-right: 30px !important;
+                }
+                &-active{
+                    padding: 5px;
+                    &::before{
+                        width: 7.5px;
+                        height: 7.5px;
+                    }
+                }
+            }
+        }
+    }
+}
