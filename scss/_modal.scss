@@ -40,14 +40,20 @@
     }
 }
 
-.tab{
-    display: none;
-    opacity: 0;
-    transition: opacity .38s ease-in-out;
-    &--display{
-        display: block;
-    }
-    &--opacity{
-        opacity: 1;
-    }
+.is-close-btn{
+    top: 20px !important;
+    right: 20px !important;
+    --f-button-color: #222 !important;
+    --f-button-bg: none !important;
 }
+// .tab{
+//     display: none;
+//     opacity: 0;
+//     transition: opacity .38s ease-in-out;
+//     &--display{
+//         display: block;
+//     }
+//     &--opacity{
+//         opacity: 1;
+//     }
+// }

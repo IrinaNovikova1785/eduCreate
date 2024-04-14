@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
     <link rel="stylesheet" href="./plugins/atuin.ru_demo_animate.min.css" />
-    
+    <link rel="stylesheet" href="./plugins/fancybox/fancybox.css" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="practicles">
         <div class="practicles__wrap"></div>
     </div>
-      
-      <!-- particles.js container -->
       <div id="particles-js">
           <header class="header header--white">
               <!-- <div class="container"> -->
@@ -36,21 +34,28 @@
           </header>
           <div class="practicles__name">Личный кабинет</div>
       </div>
+
     <div class="userNav">
         <div class="container">
             <nav class="userNav__wrapper">
                 <ul>
-                    <li>
-                        <a href="#">личный аккаунт</a>
+                    <li data-accTab="1" class="active">
+                        личный аккаунт
                     </li>
-                    <li>
-                        <a href="#">теоретическая часть</a>
+                    <li data-accTab="2">
+                        теоретическая часть
                     </li>
-                    <li>
-                        <a href="#">практическая часть</a>
+                    <li data-accTab="3">
+                        практическая часть
                     </li>
-                    <li>
-                        <a href="#">курсы</a>
+                    <li data-accTab="4">
+                        курсы
+                    </li>
+                    <li data-accTab="5">
+                        рейтинг
+                    </li>
+                    <li data-accTab="6">
+                        форум
                     </li>
                 </ul>
             </nav>
@@ -58,7 +63,7 @@
     </div> 
     <div class="account">
         <div class="container">
-            <div class="account__wrapper">
+            <div class="account__wrapper account__wrapper--opacity account__wrapper--display" data-accInfo="1">
                 <div class="account__info">
                     <img src="./image/contacts.jpeg" class="account__photo"/>
                     <div class="account__name">Евгения Фронтенд</div>
@@ -66,26 +71,302 @@
                 <form class="feedback__form">
                     <label class="feedback__label">
                         Ваш номер телефона
-                        <input type="tel" class="feedback__input" id="phone" placeholder="+7(900) 000-00-00"> 
+                        <input type="tel" class="feedback__input" id="phone" placeholder="+7(900) 000-00-00" value=" 901 805 58 38"> 
                     </label>
                     <label class="feedback__label">
                         Ваш e-mail
-                        <input type="email" class="feedback__input" placeholder="example@gmail.com">
+                        <input type="email" class="feedback__input" placeholder="example@gmail.com" value="IrinaIrina8800@gmail.com">
                     </label>
                     <label class="feedback__label">
                         Ваше имя
-                        <input type="text" class="feedback__input" placeholder="Ваше имя">
+                        <input type="text" class="feedback__input" placeholder="Ваше имя" value="Евгения">
                     </label>
                     <label class="feedback__label">
                         Ваше фамилия
-                        <input type="text" class="feedback__input" placeholder="Ваша фамилия">
+                        <input type="text" class="feedback__input" placeholder="Ваша фамилия" value="Fuck">
                     </label>
                     <label class="feedback__label">
                         Укажите ваш город или регион
-                        <input type="text" class="feedback__input" placeholder="Для учёта часового пояса">
+                        <input type="text" class="feedback__input" placeholder="Для учёта часового пояса" value="Saratov">
                     </label>
                     <button class="feedback__btn btn">Сохранить</button>
                 </form>
+            </div>
+            <div class="account__wrapper" data-accInfo="2">
+                <div class="theory">
+                    <div class="theory__wrapper">
+                        <div class="theory__anchorsWrapper">
+                            <div class="theory__anchors">
+                                <div data-scroll="#js1" class="theory__anchors-item active">
+                                    <div class="theory__anchors-part"></div>
+                                    <div class="theory__anchors-name">Язык JavaScript</div>
+                                </div>
+                                <div data-scroll="#js2" class="theory__anchors-item">
+                                    <div class="theory__anchors-part"></div>
+                                    <div class="theory__anchors-name">Браузер: документ, события, интерфейсы</div>
+                                </div>
+                                <div data-scroll="#js3" class="theory__anchors-item">
+                                    <div class="theory__anchors-part"></div>
+                                    <div class="theory__anchors-name">Тематические разделы</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="js1" class="theory__chapter">
+                            <div class="theory__preview">
+                                <div class="theory__preview-title">Язык JavaScript</div>
+                                <p>Здесь вы можете изучить JavaScript, начиная с нуля и заканчивая продвинутыми концепциями вроде ООП.</p>
+                                <p>Мы сосредоточимся на самом языке, изредка добавляя заметки о средах его исполнения.</p>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Введение</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Введение в JavaScript</a>
+                                    <a href="#">Справочники и спецификации</a>
+                                    <a href="#">Редакторы кода</a>
+                                    <a href="#">Консоль разработчика</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Основы JavaScript</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Привет, мир!</a>
+                                    <a href="#">Структура кода</a>
+                                    <a href="#">Строгий режим — "use strict"</a>
+                                    <a href="#">Переменные</a>
+                                    <a href="#">Типы данных</a>
+                                    <a href="#">Взаимодействие: alert, prompt, confirm</a>
+                                    <a href="#">Преобразование типов</a>
+                                    <a href="#">Базовые операторы, математика</a>
+                                    <a href="#">Операторы сравнения</a>
+                                    <a href="#">Условное ветвление: if, '?'</a>
+                                    <a href="#">Логические операторы</a>
+                                    <a href="#">Операторы нулевого слияния и присваивания: '??', '??='</a>
+                                    <a href="#">Циклы while и for</a>
+                                    <a href="#">Конструкция "switch"</a>
+                                    <a href="#">Функции</a>
+                                    <a href="#">Function Expression</a>
+                                    <a href="#">Стрелочные функции, основы</a>
+                                    <a href="#">Особенности JavaScript</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Качество кода</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Отладка в браузере</a>
+                                    <a href="#">Советы по стилю кода</a>
+                                    <a href="#">Комментарии</a>
+                                    <a href="#">Ниндзя-код</a>
+                                    <a href="#">Автоматическое тестирование c использованием фреймворка Mocha</a>
+                                    <a href="#">Полифилы</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Объекты: основы</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Объекты</a>
+                                    <a href="#">Копирование объектов и ссылки</a>
+                                    <a href="#">Сборка мусора</a>
+                                    <a href="#">Методы объекта, "this"</a>
+                                    <a href="#">Конструктор, оператор "new"</a>
+                                    <a href="#">Опциональная цепочка '?.'</a>
+                                    <a href="#">Тип данных Symbol</a>
+                                    <a href="#">Преобразование объектов в примитивы</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="js2" class="theory__chapter">
+                            <div class="theory__preview">
+                                <div class="theory__preview-title">Браузер: документ, события, интерфейсы</div>
+                                <p>Изучаем работу со страницей – как получать элементы, манипулировать их размерами, динамически создавать интерфейсы и взаимодействовать с посетителем.</p>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Документ</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Браузерное окружение, спецификации</a>
+                                    <a href="#">DOM-дерево</a>
+                                    <a href="#">Навигация по DOM-элементам</a>
+                                    <a href="#">Поиск: getElement*, querySelector*</a>
+                                    <a href="#">Свойства узлов: тип, тег и содержимое</a>
+                                    <a href="#">Атрибуты и свойства</a>
+                                    <a href="#">Изменение документа</a>
+                                    <a href="#">Стили и классы</a>
+                                    <a href="#">Размеры и прокрутка элементов</a>
+                                    <a href="#">Размеры и прокрутка окна</a>
+                                    <a href="#">Координаты</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Введение в события</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Введение в браузерные события</a>
+                                    <a href="#">Всплытие и погружение</a>
+                                    <a href="#">Делегирование событий</a>
+                                    <a href="#">Действия браузера по умолчанию</a>
+                                    <a href="#">Генерация пользовательских событий</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Интерфейсные события</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Основы событий мыши</a>
+                                    <a href="#">Движение мыши: mouseover/out, mouseenter/leave</a>
+                                    <a href="#">Drag'n'Drop с событиями мыши</a>
+                                    <a href="#">Клавиатура: keydown и keyup</a>
+                                    <a href="#">События указателя</a>
+                                    <a href="#">Прокрутка</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Формы, элементы управления</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Свойства и методы формы</a>
+                                    <a href="#">Фокусировка: focus/blur</a>
+                                    <a href="#">События: change, input, cut, copy, paste</a>
+                                    <a href="#">Отправка формы: событие и метод submit</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="js3" class="theory__chapter">
+                            <div class="theory__preview">
+                                <div class="theory__preview-title">Тематические разделы</div>
+                                <p>Важные темы, читать которые можно в любом порядке.</p>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Фреймы и окна</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Открытие окон и методы window</a>
+                                    <a href="#">Общение между окнами</a>
+                                    <a href="#">Атака типа clickjacking</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Бинарные данные и файлы</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">ArrayBuffer, бинарные массивы</a>
+                                    <a href="#">TextDecoder и TextEncoder</a>
+                                    <a href="#">Blob</a>
+                                    <a href="#">File и FileReader</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Сетевые запросы</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Fetch</a>
+                                    <a href="#">FormData</a>
+                                    <a href="#">Fetch: ход загрузки</a>
+                                    <a href="#">Fetch: прерывание запроса</a>
+                                    <a href="#">Fetch: запросы на другие сайты</a>
+                                    <a href="#">Fetch API</a>
+                                    <a href="#">Объекты URL</a>
+                                    <a href="#">XMLHttpRequest</a>
+                                    <a href="#">Возобновляемая загрузка файлов</a>
+                                    <a href="#">Длинные опросы</a>
+                                    <a href="#">WebSocket</a>
+                                    <a href="#">Server Sent Events</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Хранение данных в браузере</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Куки, document.cookie</a>
+                                    <a href="#">LocalStorage, sessionStorage</a>
+                                    <a href="#">IndexedDB</a>
+                                </div>
+                            </div>
+                            <div class="theory__chapterItem">
+                                <div class="theory__chapterItem-title">Анимация</div>
+                                <div class="theory__chapterItem-wrapper">
+                                    <a href="#">Кривые Безье</a>
+                                    <a href="#">CSS-анимации</a>
+                                    <a href="#">JavaScript-анимации</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account__wrapper" data-accInfo="3">
+                <form action="https://codepen.io/pen/define" method="POST" target="_blank">
+                    <input type="hidden" name="data" value='{"title": "New Pen!", "html": "<div>Hello, World!</div>"}'>
+                  
+                    <input type="submit" value="Create New Pen with Prefilled Data">
+                </form>
+
+            </div>
+            <div class="account__wrapper" data-accInfo="4">
+                <section class="blog">
+                    <div class="container">
+                        <div class="blog__wrapper">
+                            <a href="#" class="blog__item" data-wow-delay="0s">
+                                <img class="blog__item-img" src="./image/courseAcc/course1.png" alt="">
+                                <div class="blog__info">
+                                    <div class="blog__info-title">Курс «Фронтенд-разработчик»</div>
+                                    <div class="blog__info-text">Научитесь писать код для сайтов и веб-сервисов — с нуля за 10 месяцев. Сделаете первые шаги или смените направление в IT.</div>
+                                </div>
+                            </a>
+                            <a href="#" class="blog__item" data-wow-delay="0.2s">
+                                <img class="blog__item-img" src="./image/courseAcc/course2.png" alt="">
+                                <div class="blog__info">
+                                    <div class="blog__info-title">HTML и CSS: лейаут, доступность и интерактив</div>
+                                    <div class="blog__info-text">Создайте одностраничный сайт и напишете CSS для работающего приложения</div>
+                                </div>
+                            </a>
+                            <a href="#" class="blog__item" data-wow-delay="0.4s">
+                                <img class="blog__item-img" src="./image/courseAcc/course4.png" alt="">
+                                <div class="blog__info">
+                                    <div class="blog__info-title">Дизайн, адаптивная вёрстка и декорирование</div>
+                                    <div class="blog__info-text">Сделайте адаптивный сайт с разными цветовыми темами, а затем самостоятельно соберёте веб‑приложение</div>
+                                </div>
+                            </a>
+                            <a href="#" class="blog__item" data-wow-delay="0.6000000000000001s">
+                                <img class="blog__item-img" src="./image/courseAcc/course3.webp" alt="">
+                                <div class="blog__info">
+                                    <div class="blog__info-title">Базовый JavaScript</div>
+                                    <div class="blog__info-text">Создайте интерактивную страницу с фотографиями. Сначала всё сверстаете, потом напишете логику на JavaScript</div>
+                                </div>
+                            </a>
+                            <a href="#" class="blog__item" data-wow-delay="0.8s">
+                                <img class="blog__item-img" src="./image/courseAcc/course1.png" alt="">
+                                <div class="blog__info">
+                                    <div class="blog__info-title">Продвинутый JavaScript</div>
+                                    <div class="blog__info-text">Подключите веб-сервис к серверу, чтобы все изменения данных сохранились и сервисом смогли пользоваться другие люди</div>
+                                </div>
+                            </a>
+                            <a href="#" class="blog__item" data-wow-delay="1s">
+                                <img class="blog__item-img" src="./image/courseAcc/course2.png" alt="">
+                                <div class="blog__info">
+                                    <div class="blog__info-title">TypeScript и ООП</div>
+                                    <div class="blog__info-text">Спроектируете ООП-архитектуру интернет-магазина с каталогом товаров и корзиной, задокументируете в UML. Реализуете с помощью TS с подключением к серверу</div>
+                                </div>
+                            </a>
+                            <a href="#" class="blog__item" data-wow-delay="1.2000000000000002s">
+                                <img class="blog__item-img" src="./image/courseAcc/course4.png" alt="">
+                                <div class="blog__info">
+                                    <div class="blog__info-title">Основы React</div>
+                                    <div class="blog__info-text">Реализуете страницу блога с настраиваемым через CSS-переменные дизайном</div>
+                                </div>
+                            </a>
+                            <a href="#" class="blog__item" data-wow-delay="1.4000000000000001s">
+                                <img class="blog__item-img" src="./image/courseAcc/course3.webp" alt="">
+                                <div class="blog__info">
+                                    <div class="blog__info-title">Роутинг и авторизация</div>
+                                    <div class="blog__info-text">Реализуйте глобальное состояние, роутинг и авторизацию в космической бургерной</div>
+                                </div>
+                            </a>
+                            <a href="#" class="blog__item" data-wow-delay="1.6s">
+                                <img class="blog__item-img" src="./image/courseAcc/course1.png" alt="">
+                                <div class="blog__info">
+                                    <div class="blog__info-title">Тестирование React-приложений</div>
+                                    <div class="blog__info-text">Научитесь выстраивать удобную для тестирования структуру компонентов, оптимизировать приложения, проводить юнит- и интеграционное тестирование, подготавливать и публиковать в продакшен, деплоить на собственный сервер.</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="account__wrapper" data-accInfo="5">
+            </div>
+            <div class="account__wrapper" data-accInfo="6">
             </div>
         </div>
     </div>
@@ -124,34 +405,32 @@
         </div>
     </footer>
 
-    <div id="regist" class="modal modalRegist">
-        <div class="tab tab--display tab--opacity tabAuthorization">
-            <div class="modal__title">Авторизация</div>
-            <form action="" class="form">
-                <label for="" class="form__label">Логин</label>
-                <input type="text" class="form__input" placeholder="Введите логин">
-                <label for="" class="form__label">Пароль</label>
-                <input type="text" class="form__input" placeholder="Введите пароль">
-                <button class="form__btn btn">Войти</button>
-            </form>
-            <div class="modal__notRegist">
-                Не зарегистрированы? <a href="#" id="toRegist">Зарегистрироваться</a>
-            </div>
+    <div id="authorize" class="modal modalRegist">
+        <div class="modal__title">Авторизация</div>
+        <form action="" class="form">
+            <label for="" class="form__label">Логин</label>
+            <input type="text" class="form__input" placeholder="Введите логин">
+            <label for="" class="form__label">Пароль</label>
+            <input type="text" class="form__input" placeholder="Введите пароль">
+            <button class="form__btn btn">Войти</button>
+        </form>
+        <div class="modal__notRegist">
+            Не зарегистрированы? <a href="#regist" id="toRegist" data-fancybox>Зарегистрироваться</a>
         </div>
-        <div class="tab tabRegistration">
-            <div class="modal__title">Регистрация</div>
-            <form action="" class="form">
-                <label for="" class="form__label">Логин</label>
-                <input type="text" class="form__input" placeholder="Введите логин">
-                <label for="" class="form__label">Пароль</label>
-                <input type="text" class="form__input" placeholder="Введите пароль">
-                <label for="" class="form__label">Повторите пароль</label>
-                <input type="text" class="form__input" placeholder="Повторите пароль">
-                <button class="form__btn btn">Войти</button>
-            </form>
-            <div class="modal__notRegist">
-                Уже зарегистрированы? <a href="#" id="toAuthorize">Авторизация</a>
-            </div>
+    </div>
+    <div id="regist" class="modal modalRegist">
+        <div class="modal__title">Регистрация</div>
+        <form action="" class="form">
+            <label for="" class="form__label">Логин</label>
+            <input type="text" class="form__input" placeholder="Введите логин">
+            <label for="" class="form__label">Пароль</label>
+            <input type="text" class="form__input" placeholder="Введите пароль">
+            <label for="" class="form__label">Повторите пароль</label>
+            <input type="text" class="form__input" placeholder="Повторите пароль">
+            <button class="form__btn btn">Войти</button>
+        </form>
+        <div class="modal__notRegist">
+            Уже зарегистрированы? <a href="#authorize" id="toAuthorize" data-fancybox>Авторизация</a>
         </div>
     </div>
 <script
@@ -167,6 +446,9 @@
 <script src="./plugins/particles.js-master/demo/js/lib/stats.js"></script>
 <script src="./plugins/particles.js-master/particles.js"></script>
 <script src="./plugins/particles.js-master/demo/js/app.js"></script>
+<script src="./plugins/fancybox/fancybox.umd.js"></script>
+<script src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 <script src="./script/script.js"></script>
 </body>
 </html>

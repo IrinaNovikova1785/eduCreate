@@ -2,12 +2,14 @@
     display: none;
     &__name{
         position: absolute;
-        bottom: 40%;
+        translate: -50% 50%;
+        bottom: 50%;
         left: 50%;
-        translate: -50%;
+        width: 100%;
         text-transform: uppercase;
         color: #FFF;
         font-size: 48px;
+        text-align: center;
     }
 }
 /* ---- stats.js ---- */
@@ -64,3 +66,29 @@
     background-repeat: no-repeat;
   }
   
+
+  @media (max-width: 992px) {
+    .practicles{
+      &__name{
+        font-size: 40px;
+      }
+    }
+  }
+ 
+  @media (max-width: 576px) {
+    .practicles{
+      &__name{
+        font-size: 30px;
+        bottom: 40%;
+      }
+    }
+  }
+
+  @media (max-width: 430px) {
+    .practicles{
+      &__name{
+        font-size: 25px;
+        bottom: 30%;
+      }
+    }
+  }

@@ -62,20 +62,21 @@ $(window).on("load", function () {
 
         // });
     }
-    $('#toRegist').click(function(){
-        $('.tabAuthorization').removeClass('tab--display', 'tab--opacity');
-        $('.tabRegistration').addClass('tab--display');
-        setTimeout(() =>{
-            $('.tabRegistration').addClass('tab--opacity');
-        }, 200);
-    })
-    $('#toAuthorize').click(function(){
-        $('.tabRegistration').removeClass('tab--display', 'tab--opacity');
-        $('.tabAuthorization').addClass('tab--display');
-        setTimeout(() =>{
-            $('.tabAuthorization').addClass('tab--opacity');
-        }, 200);
-    })
+    
+    let toRegist = document.getElementById('toRegist');
+    let toAuthorize = document.getElementById('toAuthorize');
+
+    if(toRegist){
+      toRegist.addEventListener('click', () => {
+        Fancybox.close();
+      })
+    }
+    if(toAuthorize){
+      toAuthorize.addEventListener('click', () => {
+        Fancybox.close();
+      })
+    }
+
 
     $('.principle__item').click(function(ev) {
       $(this).find('.principle__item-text>p').slideToggle();
@@ -107,29 +108,128 @@ if(document.querySelector('.practicles__wrap')){
   };
   requestAnimationFrame(update);
 }
+function tabs(dataTab, dataInfo, className){
+  let targetMap1 = document.querySelectorAll(`[${dataTab}]`),
+      map1 = document.querySelectorAll(`.${className}`)
+
+  targetMap1?.forEach(elem => {
+      elem.addEventListener('click', function (e) {
+          e.preventDefault()
+          let navText = elem.innerHTML;
+          let accTitle = document.querySelector('.practicles__name');
+          if(accTitle){
+            accTitle.innerHTML = navText;
+          }
+
+          let target = this.getAttribute(`${dataTab}`)
+          map1.forEach(elem => {
+              elem.classList.remove(`${className}--opacity`, `${className}--display`)
+          })
+
+          targetMap1.forEach(elem => {
+              elem.classList.remove('active')
+          })
+          this.classList.add('active')
+
+          let cat = document.querySelectorAll(`[${dataInfo}='${target}']`)
+
+          cat.forEach(elem => {
+              elem.classList.add(`${className}--display`)
+              setTimeout(() => {
+                  elem.classList.add(`${className}--opacity`)
+              }, 400)
+          })
+      })
+  })
+}
+
+if(document.querySelector('.userNav__wrapper')){
+  tabs('data-acctab', 'data-accinfo', 'account__wrapper');
+}
+
+if(document.querySelector("[data-fancybox]")){
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  }); 
+}
+
+if(document.querySelector('.theory__anchors-item')){
+  if(document.querySelector('[data-scroll]')){
+    $('.theory__anchors-item').click(function() {
+      console.log('click');
+      let scrollName = $(this).attr('data-scroll'),
+        scrollElem = $(scrollName),
+        scrollTop = scrollElem.offset().top - 80; 
+    
+      $('html, body').animate({
+        scrollTop: scrollTop
+      }, 500);
+    });
+  } else{
+    $('.theory__anchors-item').click(function() {
+      console.log('click');
+      let scrollName = $(this).attr('data-scroll'),
+        scrollElem = $(scrollName),
+        scrollTop = scrollElem.offset().top; 
+    
+      $('html, body').animate({
+        scrollTop: scrollTop
+      }, 500);
+    });
+  }
+  
+  $(window).scroll(function() {
+    let scrollDistance = $(window).scrollTop();
+    
+    $('.theory__chapter').each(function() {
+      let elemTop = $(this).offset().top;
+      let elemBottom = elemTop + $(this).outerHeight();
+      let elementId = $(this).attr('id');
+      let correspondingTabItem = $('.theory__anchors-item[data-scroll="#'+elementId+'"]');
+  
+      if (scrollDistance >= elemTop - 100 && scrollDistance <= elemBottom - 100) {
+        correspondingTabItem.addClass('active');
+      } else {
+        correspondingTabItem.removeClass('active');
+      }
+    });
+  });
+} else{
+    let productTabItem = document.querySelectorAll('.product__tab-item');
+
+    productTabItem.forEach((i) => {
+      i.addEventListener('click', () => {
+        productTabItem.forEach((e) => {
+          e.classList.remove('active');
+        })
+        i.classList.add('active');
+      })
+    })
+}
+
+// CodePen.embed.init({
+//   slug: 'your-username/pen-slug',  // замените на свой username и slug песочницы
+//   user: 'your-username',
+//   preview: false,
+//   height: 300,
+//   theme_id: 6541,
+//   default_tab: 'result',
+//   embed_version: 2
+// });
 })
 
 $(document).ready(function () {
-    let wowCard = document.querySelectorAll(".blog__item");
-    for (let i = 0; i < wowCard.length; i++) {
-        wowCard[i].setAttribute("data-wow-delay", (i * 0.2) + "s");
+
+  let arrClass = ['.blog__item', '.feedback__label', '.functional__item-left', '.functional__item-right', '.contacts__item']
+  function animateArray(array) {
+    for (let i = 0; i < array.length; i++) {
+      let classes = document.querySelectorAll(array[i]);
+      for (let j = 0; j < classes.length; j++) {
+        classes[j].setAttribute("data-wow-delay", (j * 0.2) + "s");
+      }
     }
-    let wowLabel = document.querySelectorAll(".feedback__label");
-    for (let i = 0; i < wowLabel.length; i++) {
-        wowLabel[i].setAttribute("data-wow-delay", (i * 0.2) + "s");
-    }
-    let wowAboutLeft = document.querySelectorAll(".functional__item-left");
-    for (let i = 0; i < wowAboutLeft.length; i++) {
-        wowAboutLeft[i].setAttribute("data-wow-delay", (i * 0.2) + "s");
-    }
-    let wowAboutRight = document.querySelectorAll(".functional__item-right");
-    for (let i = 0; i < wowAboutRight.length; i++) {
-      wowAboutRight[i].setAttribute("data-wow-delay", (i * 0.2) + "s");
-    }
-    let contact = document.querySelectorAll(".contacts__item");
-    for (let i = 0; i < contact.length; i++) {
-      contact[i].setAttribute("data-wow-delay", (i * 0.2) + "s");
-    }
+  }
+  animateArray(arrClass)
 
     if ($(window).width() > 1024) {
         $(this)

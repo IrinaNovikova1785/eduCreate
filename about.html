@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
     <link rel="stylesheet" href="./plugins/atuin.ru_demo_animate.min.css" />
+    <link rel="stylesheet" href="./plugins/fancybox/fancybox.css" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -24,7 +25,7 @@
                         <a href="contacts.html">контакты</a></li>
                 </ul>
             </nav>
-            <a class="header__btn btn" data-fancybox data-src="#regist">Войти</a>
+            <a class="header__btn btn" data-fancybox href="#regist">Войти</a>
         <!-- </div> -->
     </header>
     <section class="preview">
@@ -278,34 +279,32 @@
         </div>
     </footer>
 
-    <div id="regist" class="modal modalRegist">
-        <div class="tab tab--display tab--opacity tabAuthorization">
-            <div class="modal__title">Авторизация</div>
-            <form action="" class="form">
-                <label for="" class="form__label">Логин</label>
-                <input type="text" class="form__input" placeholder="Введите логин">
-                <label for="" class="form__label">Пароль</label>
-                <input type="password" class="form__input" placeholder="Введите пароль">
-                <button class="form__btn btn">Войти</button>
-            </form>
-            <div class="modal__notRegist">
-                Не зарегистрированы? <a href="#" id="toRegist">Зарегистрироваться</a>
-            </div>
+    <div id="authorize" class="modal modalRegist">
+        <div class="modal__title">Авторизация</div>
+        <form action="" class="form">
+            <label for="" class="form__label">Логин</label>
+            <input type="text" class="form__input" placeholder="Введите логин">
+            <label for="" class="form__label">Пароль</label>
+            <input type="text" class="form__input" placeholder="Введите пароль">
+            <button class="form__btn btn">Войти</button>
+        </form>
+        <div class="modal__notRegist">
+            Не зарегистрированы? <a href="#regist" id="toRegist" data-fancybox>Зарегистрироваться</a>
         </div>
-        <div class="tab tabRegistration">
-            <div class="modal__title">Регистрация</div>
-            <form action="" class="form">
-                <label for="" class="form__label">Логин</label>
-                <input type="text" class="form__input" placeholder="Введите логин">
-                <label for="" class="form__label">Пароль</label>
-                <input type="password" class="form__input" placeholder="Введите пароль">
-                <label for="" class="form__label">Повторите пароль</label>
-                <input type="password" class="form__input" placeholder="Повторите пароль">
-                <button class="form__btn btn">Войти</button>
-            </form>
-            <div class="modal__notRegist">
-                Уже зарегистрированы? <a href="#" id="toAuthorize">Авторизация</a>
-            </div>
+    </div>
+    <div id="regist" class="modal modalRegist">
+        <div class="modal__title">Регистрация</div>
+        <form action="" class="form">
+            <label for="" class="form__label">Логин</label>
+            <input type="text" class="form__input" placeholder="Введите логин">
+            <label for="" class="form__label">Пароль</label>
+            <input type="text" class="form__input" placeholder="Введите пароль">
+            <label for="" class="form__label">Повторите пароль</label>
+            <input type="text" class="form__input" placeholder="Повторите пароль">
+            <button class="form__btn btn">Войти</button>
+        </form>
+        <div class="modal__notRegist">
+            Уже зарегистрированы? <a href="#authorize" id="toAuthorize" data-fancybox>Авторизация</a>
         </div>
     </div>
     <div id="registDone" class="modal modalDone ">
@@ -327,6 +326,7 @@
 <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="./plugins/atuin.ru_demo_wow_wow.js"></script>
+<script src="./plugins/fancybox/fancybox.umd.js"></script>
 <script src="./script/script.js"></script>
 </body>
 </html>
