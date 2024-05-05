@@ -15,7 +15,12 @@
 @import '_form';
 @import '_userNav';
 @import '_particles';
+@import '_pracice';
 @import '_swiper';
 @import '_link';
 @import '_footer';
 @import '_modal';
+
+a, span, p, input{
+    transition: .38s ease-in-out;
+}

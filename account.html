@@ -39,13 +39,13 @@
         <div class="container">
             <nav class="userNav__wrapper">
                 <ul>
-                    <li data-accTab="1" class="active">
+                    <li data-accTab="1">
                         личный аккаунт
                     </li>
                     <li data-accTab="2">
                         теоретическая часть
                     </li>
-                    <li data-accTab="3">
+                    <li data-accTab="3" class="active">
                         практическая часть
                     </li>
                     <li data-accTab="4">
@@ -63,7 +63,7 @@
     </div> 
     <div class="account">
         <div class="container">
-            <div class="account__wrapper account__wrapper--opacity account__wrapper--display" data-accInfo="1">
+            <div class="account__wrapper" data-accInfo="1">
                 <div class="account__info">
                     <img src="./image/contacts.jpeg" class="account__photo"/>
                     <div class="account__name">Евгения Фронтенд</div>
@@ -89,7 +89,7 @@
                         Укажите ваш город или регион
                         <input type="text" class="feedback__input" placeholder="Для учёта часового пояса" value="Saratov">
                     </label>
-                    <button class="feedback__btn btn">Сохранить</button>
+                    <button class="feedback__btn btn">Изменить</button>
                 </form>
             </div>
             <div class="account__wrapper" data-accInfo="2">
@@ -285,12 +285,26 @@
                     </div>
                 </div>
             </div>
-            <div class="account__wrapper" data-accInfo="3">
-                <form action="https://codepen.io/pen/define" method="POST" target="_blank">
-                    <input type="hidden" name="data" value='{"title": "New Pen!", "html": "<div>Hello, World!</div>"}'>
-                  
-                    <input type="submit" value="Create New Pen with Prefilled Data">
-                </form>
+            <div class="account__wrapper account__wrapper--opacity account__wrapper--display" data-accInfo="3">
+                <div class="pracice">
+                    <div class="pracice__title">Тестирование знаний</div>
+                    <p class="pracice__annotation">На этой странице вы можете протестировать свои знания 
+                        JavaScript, выбрав один из тестов.
+                    </p>
+                    <div class="pracice__wrapper">
+                        <div class="pracice__item">
+                            <div class="pracice__item-text">
+                                <div class="pracice__item-title">
+                                    Язык JavaScript
+                                </div>
+                                <p>Только сам JavaScript, без браузерных и иных расширений.</p>
+                            </div>
+                            <a href="#" class="btn btn--white">
+                                <img src="./image/icon/arrow.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <div class="account__wrapper" data-accInfo="4">

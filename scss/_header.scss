@@ -55,15 +55,24 @@
 }
 
 .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 30px;
     color: #ffffff;
     border: 1px solid #222222;
     background-color: #222222;
     transition: all 0.38s ease-in-out;
+    outline: none;
     cursor: pointer;
     &:hover{
         color: #222222;
         background-color: #ffffff;
+    }
+    &--white{
+        background-color: #FFF;
+        color: #000022;
+        border-color: #FFF
     }
 }
 
