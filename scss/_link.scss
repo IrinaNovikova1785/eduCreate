@@ -2,6 +2,7 @@
     @include fluid(width, 120px, 180px);
     @include fluid(height, 120px, 180px);
     @include fontRaleway(#FFF, 18px, 16px, 400);
+    font-family: "Proxima Nova";
     margin: 0 auto;
     display: flex;
     justify-content: center;

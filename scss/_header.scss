@@ -6,6 +6,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &__bottom{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        &-basket{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            height: 100%;
+            background-color: #222;
+            border: 1px solid #222;
+            transition: .38s ease-in-out;
+            cursor: pointer;
+            img{
+                object-fit: contain;
+                height: 17px;
+                transition: .08s ease-in-out;
+                filter: brightness(0) saturate(100%) invert(100%) 
+                sepia(0%) saturate(7334%) hue-rotate(206deg) 
+                brightness(111%) contrast(104%);
+            }
+            &:hover{
+                background-color: transparent;
+                img{
+                    filter: none;
+                }
+            }
+        }
+    }
     &--white{
         position: absolute;
         width: 100%;
@@ -14,10 +44,30 @@
         .logotype, .nav ul li a{
             color: #FFF;
         }
+        .nav ul li{
+            &::after{
+                background-color: #FFF;
+            }
+        }
         .header{
             &__btn{
                 background-color: #FFF;
                 color: #000022;
+            }
+            &__bottom{
+                &-basket{
+                    border-color: #FFF;
+                    background-color: #FFF;
+                    img{
+                        filter: brightness(0) saturate(100%) invert(12%) sepia(18%) saturate(26%) hue-rotate(42deg) brightness(101%) contrast(98%);
+                    }
+                    &:hover{
+                        background-color: transparent;
+                        img{
+                            filter: brightness(0) saturate(100%) invert(93%) sepia(53%) saturate(2%) hue-rotate(270deg) brightness(105%) contrast(100%);
+                        }
+                    }
+                }
             }
         }
     }
@@ -37,9 +87,25 @@
         @include fluid(gap, 15px, 30px);
         display: flex;
         li{
+            position: relative;
             font-family: "Raleway";
             font-weight: 400;
             text-transform: uppercase;
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 30px;
+                width: 0;
+                height: 2px;
+                background-color: #222;
+                transition: .38s ease-in-out;
+            }
+            &:hover, &.active{
+                &::after{
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -74,6 +140,11 @@
         color: #000022;
         border-color: #FFF
     }
+}
+
+.blackBlock{
+    background-color: #222;
+    height: 300px;
 }
 
 .container{

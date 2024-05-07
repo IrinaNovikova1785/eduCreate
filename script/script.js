@@ -84,10 +84,12 @@ $(window).on("load", function () {
       // $('.principle__item>span').toggleClass('active');
     })
     const phone = document.getElementById('phone');
-    const maskOptions = {
-        mask: '+{7}(000) 000-00-00'
-    };
-    const mask = IMask(phone, maskOptions);
+    if(phone){
+      const maskOptions = {
+          mask: '+{7}(000) 000-00-00'
+      };
+      const mask = IMask(phone, maskOptions);
+    }
 
 if(document.querySelector('.practicles__wrap')){
   let count_particles, stats, update;

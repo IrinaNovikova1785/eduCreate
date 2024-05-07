@@ -21,15 +21,26 @@
                   <a href="index.html" class="logotype">edu<span>create</span></a>
                   <nav class="nav nav--header">
                       <ul>
-                          <li>
-                              <a href="about.html">о нас</a></li>
-                          <li>
-                              <a href="#">блог</a></li>
-                          <li>
-                              <a href="contacts.html">контакты</a></li>
+                        <li>
+                            <a href="about.html">о нас</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">блог</a>
+                        </li>
+                        <li>
+                            <a href="course.html">курсы</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">контакты</a>
+                        </li>
                       </ul>
                   </nav>
-                  <a href="#" class="header__btn btn">Выйти</a>
+                  <div class="header__bottom">
+                    <div class="header__bottom-basket">
+                        <img src="./image/icon/basket.svg" alt="">
+                    </div>
+                    <a href="#" class="header__btn btn">Выйти</a>
+                </div>
               <!-- </div> -->
           </header>
           <div class="practicles__name">Личный кабинет</div>
@@ -49,12 +60,9 @@
                         практическая часть
                     </li>
                     <li data-accTab="4">
-                        курсы
-                    </li>
-                    <li data-accTab="5">
                         рейтинг
                     </li>
-                    <li data-accTab="6">
+                    <li data-accTab="5">
                         форум
                     </li>
                 </ul>
@@ -286,101 +294,72 @@
                 </div>
             </div>
             <div class="account__wrapper account__wrapper--opacity account__wrapper--display" data-accInfo="3">
-                <div class="pracice">
-                    <div class="pracice__title">Тестирование знаний</div>
-                    <p class="pracice__annotation">На этой странице вы можете протестировать свои знания 
+                <div class="practice">
+                    <div class="practice__title">Тестирование знаний</div>
+                    <p class="practice__annotation">На этой странице вы можете протестировать свои знания 
                         JavaScript, выбрав один из тестов.
                     </p>
-                    <div class="pracice__wrapper">
-                        <div class="pracice__item">
-                            <div class="pracice__item-text">
-                                <div class="pracice__item-title">
+                    <div class="practice__wrapper">
+                        <a href="#" class="practice__item">
+                            <div class="practice__item-text">
+                                <div class="practice__item-title">
                                     Язык JavaScript
                                 </div>
                                 <p>Только сам JavaScript, без браузерных и иных расширений.</p>
                             </div>
-                            <a href="#" class="btn btn--white">
+                            <div class="btn">
                                 <img src="./image/icon/arrow.svg" alt="">
-                            </a>
-                        </div>
+                            </div>
+                        </a>
+                        <a href="#" class="practice__item">
+                            <div class="practice__item-text">
+                                <div class="practice__item-title">
+                                    Язык JavaScript
+                                </div>
+                                <p>Только сам JavaScript, без браузерных и иных расширений.</p>
+                            </div>
+                            <div class="btn">
+                                <img src="./image/icon/arrow.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#" class="practice__item">
+                            <div class="practice__item-text">
+                                <div class="practice__item-title">
+                                    Язык JavaScript
+                                </div>
+                                <p>Только сам JavaScript, без браузерных и иных расширений.</p>
+                            </div>
+                            <div class="btn">
+                                <img src="./image/icon/arrow.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#" class="practice__item">
+                            <div class="practice__item-text">
+                                <div class="practice__item-title">
+                                    Язык JavaScript
+                                </div>
+                                <p>Только сам JavaScript, без браузерных и иных расширений.</p>
+                            </div>
+                            <div class="btn">
+                                <img src="./image/icon/arrow.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="practice__explanation">
+                        <div class="practice__explanation-title">Пояснения:</div>
+                        <ul>
+                            <li>Тесты предполагают современные браузеры.</li>
+                            <li>Все настройки браузера – по умолчанию.</li>
+                            <li>Версия JavaScript – современная.</li>
+                            <li>Везде <code>"use strict"</code></li>
+                        </ul>
+                        <p>Если у вас не получилось ответить на многие вопросы – не расстраивайтесь. Его цель – не только проверить знания, но и помочь заполнить пробелы в них. Многие вопросы неочевидны и требуют не только знаний, но и опыта. Удачи!</p>
                     </div>
                 </div>
-
             </div>
             <div class="account__wrapper" data-accInfo="4">
-                <section class="blog">
-                    <div class="container">
-                        <div class="blog__wrapper">
-                            <a href="#" class="blog__item" data-wow-delay="0s">
-                                <img class="blog__item-img" src="./image/courseAcc/course1.png" alt="">
-                                <div class="blog__info">
-                                    <div class="blog__info-title">Курс «Фронтенд-разработчик»</div>
-                                    <div class="blog__info-text">Научитесь писать код для сайтов и веб-сервисов — с нуля за 10 месяцев. Сделаете первые шаги или смените направление в IT.</div>
-                                </div>
-                            </a>
-                            <a href="#" class="blog__item" data-wow-delay="0.2s">
-                                <img class="blog__item-img" src="./image/courseAcc/course2.png" alt="">
-                                <div class="blog__info">
-                                    <div class="blog__info-title">HTML и CSS: лейаут, доступность и интерактив</div>
-                                    <div class="blog__info-text">Создайте одностраничный сайт и напишете CSS для работающего приложения</div>
-                                </div>
-                            </a>
-                            <a href="#" class="blog__item" data-wow-delay="0.4s">
-                                <img class="blog__item-img" src="./image/courseAcc/course4.png" alt="">
-                                <div class="blog__info">
-                                    <div class="blog__info-title">Дизайн, адаптивная вёрстка и декорирование</div>
-                                    <div class="blog__info-text">Сделайте адаптивный сайт с разными цветовыми темами, а затем самостоятельно соберёте веб‑приложение</div>
-                                </div>
-                            </a>
-                            <a href="#" class="blog__item" data-wow-delay="0.6000000000000001s">
-                                <img class="blog__item-img" src="./image/courseAcc/course3.webp" alt="">
-                                <div class="blog__info">
-                                    <div class="blog__info-title">Базовый JavaScript</div>
-                                    <div class="blog__info-text">Создайте интерактивную страницу с фотографиями. Сначала всё сверстаете, потом напишете логику на JavaScript</div>
-                                </div>
-                            </a>
-                            <a href="#" class="blog__item" data-wow-delay="0.8s">
-                                <img class="blog__item-img" src="./image/courseAcc/course1.png" alt="">
-                                <div class="blog__info">
-                                    <div class="blog__info-title">Продвинутый JavaScript</div>
-                                    <div class="blog__info-text">Подключите веб-сервис к серверу, чтобы все изменения данных сохранились и сервисом смогли пользоваться другие люди</div>
-                                </div>
-                            </a>
-                            <a href="#" class="blog__item" data-wow-delay="1s">
-                                <img class="blog__item-img" src="./image/courseAcc/course2.png" alt="">
-                                <div class="blog__info">
-                                    <div class="blog__info-title">TypeScript и ООП</div>
-                                    <div class="blog__info-text">Спроектируете ООП-архитектуру интернет-магазина с каталогом товаров и корзиной, задокументируете в UML. Реализуете с помощью TS с подключением к серверу</div>
-                                </div>
-                            </a>
-                            <a href="#" class="blog__item" data-wow-delay="1.2000000000000002s">
-                                <img class="blog__item-img" src="./image/courseAcc/course4.png" alt="">
-                                <div class="blog__info">
-                                    <div class="blog__info-title">Основы React</div>
-                                    <div class="blog__info-text">Реализуете страницу блога с настраиваемым через CSS-переменные дизайном</div>
-                                </div>
-                            </a>
-                            <a href="#" class="blog__item" data-wow-delay="1.4000000000000001s">
-                                <img class="blog__item-img" src="./image/courseAcc/course3.webp" alt="">
-                                <div class="blog__info">
-                                    <div class="blog__info-title">Роутинг и авторизация</div>
-                                    <div class="blog__info-text">Реализуйте глобальное состояние, роутинг и авторизацию в космической бургерной</div>
-                                </div>
-                            </a>
-                            <a href="#" class="blog__item" data-wow-delay="1.6s">
-                                <img class="blog__item-img" src="./image/courseAcc/course1.png" alt="">
-                                <div class="blog__info">
-                                    <div class="blog__info-title">Тестирование React-приложений</div>
-                                    <div class="blog__info-text">Научитесь выстраивать удобную для тестирования структуру компонентов, оптимизировать приложения, проводить юнит- и интеграционное тестирование, подготавливать и публиковать в продакшен, деплоить на собственный сервер.</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </section>
             </div>
             <div class="account__wrapper" data-accInfo="5">
-            </div>
-            <div class="account__wrapper" data-accInfo="6">
             </div>
         </div>
     </div>
