@@ -1,0 +1,15 @@
+.blackBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+    &__name{
+        @include fluid(font-size, 36px, 48px);
+        font-weight: 600;
+        color: #FFF;
+        margin-top: 4%;
+    }
+}
+pre[class*=language-]>code[class*=language-] {
+    display: flex;
+}

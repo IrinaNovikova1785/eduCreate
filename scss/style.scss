@@ -2,6 +2,7 @@
 @import '_mixins';
 @import '_normalize';
 @import '_header';
+@import '_basket';
 @import '_preview';
 @import '_blog';
 @import '_functional';
@@ -18,8 +19,11 @@
 @import '_pracice';
 @import '_swiper';
 @import '_link';
+@import '_test';
+@import '_rating';
 @import '_footer';
 @import '_modal';
+@import '_blackBlock';
 
 a, span, p, input{
     transition: .38s ease-in-out;

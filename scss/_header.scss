@@ -11,6 +11,7 @@
         align-items: center;
         gap: 20px;
         &-basket{
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -20,7 +21,7 @@
             border: 1px solid #222;
             transition: .38s ease-in-out;
             cursor: pointer;
-            img{
+            &Img{
                 object-fit: contain;
                 height: 17px;
                 transition: .08s ease-in-out;
@@ -30,7 +31,7 @@
             }
             &:hover{
                 background-color: transparent;
-                img{
+                .header__bottom-basketImg{
                     filter: none;
                 }
             }
@@ -58,12 +59,12 @@
                 &-basket{
                     border-color: #FFF;
                     background-color: #FFF;
-                    img{
+                    &Img{
                         filter: brightness(0) saturate(100%) invert(12%) sepia(18%) saturate(26%) hue-rotate(42deg) brightness(101%) contrast(98%);
                     }
                     &:hover{
                         background-color: transparent;
-                        img{
+                        .header__bottom-basketImg{
                             filter: brightness(0) saturate(100%) invert(93%) sepia(53%) saturate(2%) hue-rotate(270deg) brightness(105%) contrast(100%);
                         }
                     }
@@ -131,7 +132,7 @@
     transition: all 0.38s ease-in-out;
     outline: none;
     cursor: pointer;
-    &:hover{
+    &:hover, &.active{
         color: #222222;
         background-color: #ffffff;
     }
@@ -139,6 +140,10 @@
         background-color: #FFF;
         color: #000022;
         border-color: #FFF
+    }
+    &.disabled{
+        background-color: #a64141;
+        pointer-events: none;
     }
 }
 

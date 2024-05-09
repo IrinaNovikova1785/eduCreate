@@ -91,25 +91,7 @@ $(window).on("load", function () {
       const mask = IMask(phone, maskOptions);
     }
 
-if(document.querySelector('.practicles__wrap')){
-  let count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.practicles__wrap');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-}
+
 function tabs(dataTab, dataInfo, className){
   let targetMap1 = document.querySelectorAll(`[${dataTab}]`),
       map1 = document.querySelectorAll(`.${className}`)
@@ -149,11 +131,59 @@ if(document.querySelector('.userNav__wrapper')){
   tabs('data-acctab', 'data-accinfo', 'account__wrapper');
 }
 
+if(document.querySelector('.test__question')){
+  tabs('data-tabtest', 'data-infotest', 'test__question');
+}
+
 if(document.querySelector("[data-fancybox]")){
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
   }); 
 }
+
+
+let basketBtn = document.querySelector('.header__bottom-basket');
+let basket = basketBtn.querySelector('.basket');
+
+if(basketBtn){
+  basketBtn.addEventListener('click', () => {
+    if(basketBtn.querySelector('.basket--display')){
+      basket.classList.remove('basket--opacity');
+      setTimeout(() => {
+        basket.classList.remove('basket--display');
+      }, 200);
+    } else{
+      basket.classList.add('basket--display');
+      setTimeout(() => {
+        basket.classList.add('basket--opacity');
+      }, 200);
+    }
+  })
+}
+
+
+
+let testTab = document.querySelectorAll('.test__tab');
+let testNext = document.querySelector('.test__next');
+
+if(testTab){
+  let arrTab = Array.from(testTab);
+  let currentTabIndex = 1;
+  let clickedAllTabs = false;
+
+  testNext.addEventListener('click', () => {
+    if(currentTabIndex < arrTab.length && !clickedAllTabs) {
+      arrTab[currentTabIndex].click();
+      currentTabIndex++;
+      if (currentTabIndex === arrTab.length) {
+        clickedAllTabs = true;
+      }
+    } else if(clickedAllTabs) {
+      window.location.href = "practiceResult.html"
+    }
+  });
+}
+
 
 if(document.querySelector('.theory__anchors-item')){
   if(document.querySelector('[data-scroll]')){
@@ -209,15 +239,28 @@ if(document.querySelector('.theory__anchors-item')){
     })
 }
 
-// CodePen.embed.init({
-//   slug: 'your-username/pen-slug',  // замените на свой username и slug песочницы
-//   user: 'your-username',
-//   preview: false,
-//   height: 300,
-//   theme_id: 6541,
-//   default_tab: 'result',
-//   embed_version: 2
-// });
+
+if(document.querySelector('.practicles__wrap')){
+  let count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.practicles__wrap');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+
 })
 
 $(document).ready(function () {

@@ -1,5 +1,5 @@
 .account{
-    @include fluid(margin-top, 30px, 100px);
+    @include fluid(margin-top, 30px, 60px);
     &__wrapper{
         display: none;
         opacity: 0;
@@ -38,7 +38,9 @@
         }
     }
 }
-
+#particles-js{
+    height: 500px !important;
+}
 @media (max-width: 992px) {
     .account{
         &__wrapper{

@@ -1,0 +1,47 @@
+.basket{
+    @include fluid(padding, 20px, 30px);
+    position: absolute;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    z-index: 2;
+    gap: 20px;
+    top: 50px;
+    right: 0;
+    width: 370px;
+    background-color: #FFF;
+    border: 1px solid #222;
+    transition: .38s ease-in-out;
+    &--display{
+        display: flex;
+    }
+    &--opacity{
+        opacity: 1;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        &-name{
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+    }
+    &__price{
+        margin-left: auto;
+    }
+    &__img{
+        object-fit: cover;
+        width: 40px;
+        height: 40px;
+        filter: unset;
+    }
+    &__delete{
+        object-fit: contain;
+        height: 24px;
+    }
+    .btn{
+        width: 100%;
+    }
+}

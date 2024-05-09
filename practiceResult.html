@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="practicles">
-        <div class="practicles__wrap"></div>
-    </div>
       <div class="blackBlock">
           <header class="header header--white">
               <!-- <div class="container"> -->
@@ -69,57 +66,68 @@
       <section class="test">
         <div class="container">
             <div class="test__wrapper">
-                <div class="test__tabWrapper">
-                    <div class="test__tab btn active" data-tabTest="1">1</div>
-                    <div class="test__tab btn" data-tabTest="2">2</div>
-                    <div class="test__tab btn" data-tabTest="3">3</div>
-                    <div class="test__tab btn" data-tabTest="4">4</div>
-                    <div class="test__tab btn" data-tabTest="5">5</div>
-                    <div class="test__tab btn" data-tabTest="6">6</div>
-                    <div class="test__tab btn" data-tabTest="7">7</div>
-                    <div class="test__tab btn" data-tabTest="8">8</div>
-                    <div class="test__tab btn" data-tabTest="9">9</div>
-                    <div class="test__tab btn" data-tabTest="10">10</div>
+                <div class="test__results">
+                    <div class="test__resultsInfo">
+                        <div class="test__resultsInfo-item">
+                            <div class="test__resultsInfo-text">Ваш результат:</div>
+                            <div class="test__resultsInfo-title">35%</div>
+                        </div>
+                        <div class="test__resultsInfo-item skill">
+                            <div class="test__resultsInfo-img">
+                                <img src="./image/skill.svg" alt="">
+                            </div>
+                            <div class="test__resultsInfo-text">Ваш предположительный уровень — <span>Новичок</span></div>
+                        </div>
+                        <div class="test__resultsInfo-item">
+                            <div class="test__resultsInfo-text">Вы прошли тест лучше, чем</div>
+                            <div class="test__resultsInfo-title">19%</div>
+                            <div class="test__resultsInfo-text">респондентов</div>
+                        </div>
+                    </div>
+                    <div class="test__resultsBottom">
+                        <a href="#" class="btn btn--white">Пройти тест заново</a>
+                        <a href="#" class="btn btn--white">Опубликовать результат в профиле</a>
+                    </div>
                 </div>
-                <div class="test__question test__question--display test__question--opacity" data-infoTest="1">
+                <div class="test__question test__question--true" data-infoTest="1">
                     <div class="test__question-title">Язык JavaScript является подвидом языка Java – верно?</div>
                     <form class="test__question-form">
                         <label>
-                            <input name="t1" type="radio">
+                            <input name="t1" type="radio" checked>
                             <p>Да.</p>
                         </label>
                         <label>
-                            <input name="t1" type="radio">
+                            <input name="t1" type="radio" disabled="disabled">
                             <p>Нет.</p>
                         </label>
                         <label>
-                            <input name="t1" type="radio">
+                            <input name="t1" type="radio" disabled="disabled">
                             <p>Наоборот, Java – подвид JavaScript.</p>
                         </label>
                     </form>
                 </div>
-                <div class="test__question" data-infoTest="2">
+                <div class="test__question test__question--true" data-infoTest="2">
                     <div class="test__question-title">Что получится, если сложить </div>
                     <form class="test__question-form">
                         <label>
-                            <input name="t2" type="radio">
+                            <input name="t2" type="radio" disabled="disabled">
                             <code>"truefalse"</code>
                         </label>
                         <label>
-                            <input name="t2" type="radio">
+                            <input name="t2" type="radio" disabled="disabled">
                             <code>0</code>
                         </label>
                         <label>
-                            <input name="t2" type="radio">
+                            <input name="t2" type="radio" checked>
                             <code>1</code>
                         </label>
                         <label>
-                            <input name="t2" type="radio">
+                            <input name="t2" type="radio" disabled="disabled">
                             <code>NaN</code>
                         </label>
                     </form>
                 </div>
-                <div class="test__question" data-infoTest="3">
+                <div class="test__question test__question--false" data-infoTest="3">
                     <div class="test__question-title">Чему равно такое выражение?</div>
                     <code>
                         for(&nbsp;let key in {1:1, 0:0}&nbsp;) {<br>
@@ -144,54 +152,54 @@
                             </p>
                         </label>
                         <label>
-                            <input name="t3" type="radio">
+                            <input name="t3" type="radio" disabled="disabled">
                             <p>В коде ошибка.</p>
                         </label>
                         <label>
-                            <input name="t3" type="radio">
+                            <input name="t3" type="radio" checked>
                             <p>Зависит от браузера.</p>
                         </label>
                     </form>
                 </div>
-                <div class="test__question" data-infoTest="4">
+                <div class="test__question test__question--true" data-infoTest="4">
                     <div class="test__question-title">Язык JavaScript является подвидом языка Java – верно?</div>
                     <form class="test__question-form">
                         <label>
-                            <input name="t4" type="radio">
+                            <input name="t4" type="radio" checked>
                             <p>Да.</p>
                         </label>
                         <label>
-                            <input name="t4" type="radio">
+                            <input name="t4" type="radio" disabled="disabled">
                             <p>Нет.</p>
                         </label>
                         <label>
-                            <input name="t4" type="radio">
+                            <input name="t4" type="radio" disabled="disabled">
                             <p>Наоборот, Java – подвид JavaScript.</p>
                         </label>
                     </form>
                 </div>
-                <div class="test__question" data-infoTest="5">
+                <div class="test__question test__question--false" data-infoTest="5">
                     <div class="test__question-title">Что получится, если сложить </div>
                     <form class="test__question-form">
                         <label>
-                            <input name="t5" type="radio">
+                            <input name="t5" type="radio" disabled="disabled">
                             <code>"truefalse"</code>
                         </label>
                         <label>
-                            <input name="t5" type="radio">
+                            <input name="t5" type="radio" disabled="disabled">
                             <code>0</code>
                         </label>
                         <label>
-                            <input name="t5" type="radio">
+                            <input name="t5" type="radio" checked>
                             <code>1</code>
                         </label>
                         <label>
-                            <input name="t5" type="radio">
+                            <input name="t5" type="radio" disabled="disabled">
                             <code>NaN</code>
                         </label>
                     </form>
                 </div>
-                <div class="test__question" data-infoTest="6">
+                <div class="test__question test__question--false" data-infoTest="6">
                     <div class="test__question-title">Чему равно такое выражение?</div>
                     <code>
                         for(&nbsp;let key in {1:1, 0:0}&nbsp;) {<br>
@@ -200,7 +208,7 @@
                     </code>
                     <form class="test__question-form">
                         <label>
-                            <input name="t6" type="radio">
+                            <input name="t6" type="radio" checked>
                             <p>
                                 <code>1,</code>
                                 затем
@@ -208,7 +216,7 @@
                             </p>
                         </label>
                         <label>
-                            <input name="t6" type="radio">
+                            <input name="t6" type="radio" disabled="disabled">
                             <p>
                                 <code>0,</code>
                                 затем
@@ -216,54 +224,54 @@
                             </p>
                         </label>
                         <label>
-                            <input name="t6" type="radio">
+                            <input name="t6" type="radio" disabled="disabled">
                             <p>В коде ошибка.</p>
                         </label>
                         <label>
-                            <input name="t6" type="radio">
+                            <input name="t6" type="radio" disabled="disabled">
                             <p>Зависит от браузера.</p>
                         </label>
                     </form>
                 </div>
-                <div class="test__question" data-infoTest="7">
+                <div class="test__question test__question--false" data-infoTest="7">
                     <div class="test__question-title">Язык JavaScript является подвидом языка Java – верно?</div>
                     <form class="test__question-form">
                         <label>
-                            <input name="t7" type="radio">
+                            <input name="t7" type="radio" disabled="disabled">
                             <p>Да.</p>
                         </label>
                         <label>
-                            <input name="t7" type="radio">
+                            <input name="t7" type="radio" checked>
                             <p>Нет.</p>
                         </label>
                         <label>
-                            <input name="t7" type="radio">
+                            <input name="t7" type="radio" disabled="disabled">
                             <p>Наоборот, Java – подвид JavaScript.</p>
                         </label>
                     </form>
                 </div>
-                <div class="test__question" data-infoTest="8">
+                <div class="test__question test__question--true" data-infoTest="8">
                     <div class="test__question-title">Что получится, если сложить </div>
                     <form class="test__question-form">
                         <label>
-                            <input name="t8" type="radio">
+                            <input name="t8" type="radio" disabled="disabled">
                             <code>"truefalse"</code>
                         </label>
                         <label>
-                            <input name="t8" type="radio">
+                            <input name="t8" type="radio" checked>
                             <code>0</code>
                         </label>
                         <label>
-                            <input name="t8" type="radio">
+                            <input name="t8" type="radio" disabled="disabled">
                             <code>1</code>
                         </label>
                         <label>
-                            <input name="t8" type="radio">
+                            <input name="t8" type="radio" disabled="disabled">
                             <code>NaN</code>
                         </label>
                     </form>
                 </div>
-                <div class="test__question" data-infoTest="9">
+                <div class="test__question test__question--true" data-infoTest="9">
                     <div class="test__question-title">Чему равно такое выражение?</div>
                     <code>
                         for(&nbsp;let key in {1:1, 0:0}&nbsp;) {<br>
@@ -272,7 +280,7 @@
                     </code>
                     <form class="test__question-form">
                         <label>
-                            <input name="t9" type="radio">
+                            <input name="t9" type="radio" disabled="disabled">
                             <p>
                                 <code>1,</code>
                                 затем
@@ -280,7 +288,7 @@
                             </p>
                         </label>
                         <label>
-                            <input name="t9" type="radio">
+                            <input name="t9" type="radio" disabled="disabled">
                             <p>
                                 <code>0,</code>
                                 затем
@@ -288,33 +296,32 @@
                             </p>
                         </label>
                         <label>
-                            <input name="t9" type="radio">
+                            <input name="t9" type="radio" disabled="disabled">
                             <p>В коде ошибка.</p>
                         </label>
                         <label>
-                            <input name="t9" type="radio">
+                            <input name="t9" type="radio" checked>
                             <p>Зависит от браузера.</p>
                         </label>
                     </form>
                 </div>
-                <div class="test__question" data-infoTest="10">
+                <div class="test__question test__question--true" data-infoTest="10">
                     <div class="test__question-title">Язык JavaScript является подвидом языка Java – верно?</div>
                     <form class="test__question-form">
                         <label>
-                            <input name="t10" type="radio">
+                            <input name="t10" type="radio" checked>
                             <p>Да.</p>
                         </label>
                         <label>
-                            <input name="t10" type="radio">
+                            <input name="t10" type="radio" disabled="disabled">
                             <p>Нет.</p>
                         </label>
                         <label>
-                            <input name="t10" type="radio">
+                            <input name="t10" type="radio" disabled="disabled">
                             <p>Наоборот, Java – подвид JavaScript.</p>
                         </label>
                     </form>
                 </div>
-                <div class="test__next btn">Продолжить</div>
             </div>
         </div>
     </section>
