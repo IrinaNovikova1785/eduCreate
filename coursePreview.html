@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <link rel="stylesheet" href="./plugins/atuin.ru_demo_animate.min.css" />
+    <link rel="stylesheet" href="./plugins/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="practicles">
+        <div class="practicles__wrap"></div>
+    </div>
+      <div class="blackBlock">
+          <header class="header header--white">
+              <!-- <div class="container"> -->
+                  <a href="index.html" class="logotype">edu<span>create</span></a>
+                  <nav class="nav nav--header">
+                      <ul>
+                        <li>
+                            <a href="about.html">о нас</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">блог</a>
+                        </li>
+                        <li>
+                            <a href="course.html">курсы</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">контакты</a>
+                        </li>
+                      </ul>
+                  </nav>
+                  <div class="header__bottom">
+                    <div class="header__bottom-basket">
+                        <img src="./image/icon/basket.svg" alt="" class="header__bottom-basketImg">
+                        <div class="basket">
+                            <div class="basket__item">
+                                <img src="./image/blog/blog1.jpeg" alt="" class="basket__img">
+                                <div class="basket__description">
+                                    <div class="basket__item-name">Курс JS</div>
+                                    <p>Все очень просто</p>
+                                </div>
+                                <div class="basket__price">5000P</div>
+                                <img src="./image/icon/trash.svg" alt="" class="basket__delete">
+                            </div>
+                            <div class="basket__item">
+                                <img src="./image/blog/blog1.jpeg" alt="" class="basket__img">
+                                <div class="basket__description">
+                                    <div class="basket__item-name">Курс JS</div>
+                                    <p>Все очень просто</p>
+                                </div>
+                                <div class="basket__price">5000P</div>
+                                <img src="./image/icon/trash.svg" alt="" class="basket__delete">
+                            </div>
+                            <a href="#" class="btn">В корзину</a>
+                        </div>
+                    </div>
+                    <a href="#" class="header__btn btn">Выйти</a>
+                </div>
+              <!-- </div> -->
+          </header>
+          <h1 class="blackBlock__name">Курс по Node.js</h1>
+      </div>
+      <section class="course">
+        <div class="coursePrice">
+            <div class="container">
+                <div class="coursePrice__wrapper">
+                    <div class="coursePrice__left">
+                        <a href="course.html" class="coursePrice__back">
+                            <img src="./image/icon/arrow.svg" alt="">
+                            <p>Все курсы</p>
+                        </a>
+                        <div class="coursePrice__text">Курс для тех, кто ранее не разрабатывал на Node.JS или хочет получить хороший level-up в этой технологии.</div>
+                    </div>
+                    <div class="coursePrice__right">
+                        <img src="./image/icon/node.svg" alt="" class="coursePrice__right-img">
+                        <p>Стоимость курса состовляет 24700р (≈269$).</p>
+                        <button class="btn">
+                            Добавить в корзину
+                            <img src="./image/icon/basket.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="./image/course/node.png" alt="" class="course__img">
+            <div class="course__wrapper">
+                <div class="course__info">
+                    <div class="textBlock infoScroll" id="about">
+                        <div class="subtitle">О курсе</div>
+                        <p>Этот курс посвящён профессиональной серверной разработке на Node.js.</p>
+                        <p>Мы изучим, как писать современные серверные приложения.</p>
+                        <p>Основные темы курса:</p>
+                        <ul>
+                            <li>Фундаментальное понимание Node.js: важные встроенные и сторонние модули, потоки.</li>
+                            <li>Работа с базой данных MongoDB (с другими базами она устроена аналогично).</li>
+                            <li>Веб-сервисы и обычные страницы для обработки сетевых запросов.</li>
+                            <li>Авторизация, в том числе через соц. сети.</li>
+                            <li>Непрерывное соединение и общение при помощи Websockets.</li>
+                            <li>Тестирование: unit-тесты, функциональное и e2e тестирование.</li>
+                            <li>
+                                А также ряд других аспектов, которые не так заметны, но тоже важно сделать правильно: 
+                                конфигурация, логи, обработка ошибок, роутинг и т.п.
+                            </li>
+                        </ul>
+                        <p><b>Этот курс временно не проводится из-за необходимости переработки программы.</b></p>
+                        <p><b>Узнать о новой программе и начале набора можно, запросив уведомление.</b></p>
+                    </div>
+                    <div class="textBlock infoScroll" id="steps">
+                        <div class="subtitle">Как организовано обучение?</div>
+                        <p>Курс идёт примерно 1.5 месяца.</p>
+                        <div class="steps">
+                            <div class="steps__item">
+                                <div class="steps__item-title">До начала обучения: вводные материалы</div>
+                                <p>
+                                    За неделю до курса мы попросим вам посмотреть видео-лекции по основам Node.js. Они довольно простые, 
+                                    чтобы на первом занятии вы уже что-то знали.
+                                </p>
+                                <p>
+                                    Мы также будем использовать систему Git/GitHub для обмена исходным кодом, так делает большинство проектов. 
+                                    Для тех, кому это в новинку - дадим крэш-курс и поможем разобраться.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Онлайн-занятия с преподавателем 2 раза в неделю</div>
+                                <p>
+                                    Занятие проходит в формате вебинара. Запись занятия доступна через 15 минут после окончания. Вы также сохраняете 
+                                    доступ к записям после окончания курса.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Домашние задания, обратная связь по ним</div>
+                                <p>
+                                    Ваши решения присылаете преподавателю, он проверяет качество кода, использование правильных приёмов проектирования,
+                                    даёт обратную связь.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Чат</div>
+                                <p>
+                                    Между занятиями доступен групповой чат для общения и вопросов преподавателю.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Курсовой проект</div>
+                                <p>
+                                    Делаем курсовой проект: интернет-магазин. Большую часть кода для проекта пишете вы.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Результат</div>
+                                <p>
+                                    Вы хорошо разбираетесь в устройстве Node.JS, разрабатываете и отлаживаете программы на нём.
+                                </p>
+                                <p>
+                                    Вы знаете, как поднять проект малого и среднего размера, чтобы он стабильно работал, 
+                                    не падал, корректно отрабатывал при ошибках.
+                                </p>
+                                <p>
+                                    Вы можете разработать современный веб-сервис на Node.JS с использованием самого 
+                                    последнего стандарта JavaScript и фреймворков.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Сертификат</div>
+                                <p>
+                                    По окончанию курсов вы получаете сертификат в электронном виде на русском и английском языках.
+                                </p>
+                                <p>
+                                    Хотя сертификатам в нашей профессии обычно не придают значения. Главное - знания и умения, которые вы получите, 
+                                    если будете полноценно участвовать в курсе.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textBlock infoScroll" id="steps2">
+                        <div class="subtitle">Программа</div>
+                        <p>Занятия проходят онлайн два раза в неделю.</p>
+                        <div class="steps steps--num">
+                            <div class="steps__item">
+                                <div class="steps__item-title">Собрание</div>
+                                <p>
+                                    Первая встреча традиционно является собранием. На нём мы знакомимся, проверяем подключение, обсуждаем организационные 
+                                    вопросы, взаимодействие с преподавателем, как учиться на курсе.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Фундаментальный Node.js</div>
+                                <p>
+                                    Изучим, как устроен Node.js, его внутреннюю архитектуру и основные приёмы разработки.
+                                </p>
+                                <ul>
+                                    <li>Настройка окружения для разработки.</li>
+                                    <li>Прием и обработка HTTP-запросов.</li>
+                                    <li>Организация кода Node.js-приложения: модули в старом (commonjs) и новом (ES modules) синтаксисе.</li>
+                                    <li>Отладка процесса Node.js: скрипты, утечки памяти.</li>
+                                    <li>Жизнь и смерть Node.JS-процесса, событийный цикл. Макротаски и микротаски, особенности работы в Node.js.</li>
+                                    <li>HTTP-сервер, асинхронная модель Node.js.</li>
+                                </ul>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Потоки данных</div>
+                                <p>
+                                    Потоки данных в Node.js используются при приёме и отправке multipart-форм, файлов, больших запросах к базе данных 
+                                    и во многих других ситуациях.
+                                </p>
+                                <p>
+                                    Когда разработчики переходят от обычного JavaScript к Node.js, у них всегда возникают сложности с потоками, 
+                                    поэтому мы уделяем им особое внимание.
+                                </p>
+                                <ul>
+                                    <li>Потоки для чтения, записи и преобразования данных. Область применения потоков, их правильное использование.</li>
+                                    <li>Внутреннее устройство потоков: буферизация данных, события, методы управления потоками.</li>
+                                    <li>Тип данных Buffer для бинарных данных.</li>
+                                    <li>Передача данных из потока в поток, обработка ошибок в цепочке.</li>
+                                    <li>Последние изменения и улучшения: потоки в Node.js постоянно меняются, мы даём самую последнюю версию.</li>
+                                </ul>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Потоки данных</div>
+                                <p>
+                                    Потоки данных в Node.js используются при приёме и отправке multipart-форм, файлов, больших запросах к базе данных 
+                                    и во многих других ситуациях.
+                                </p>
+                                <p>
+                                    Когда разработчики переходят от обычного JavaScript к Node.js, у них всегда возникают сложности с потоками, 
+                                    поэтому мы уделяем им особое внимание.
+                                </p>
+                                <ul>
+                                    <li>Потоки для чтения, записи и преобразования данных. Область применения потоков, их правильное использование.</li>
+                                    <li>Внутреннее устройство потоков: буферизация данных, события, методы управления потоками.</li>
+                                    <li>Тип данных Buffer для бинарных данных.</li>
+                                    <li>Передача данных из потока в поток, обработка ошибок в цепочке.</li>
+                                    <li>Последние изменения и улучшения: потоки в Node.js постоянно меняются, мы даём самую последнюю версию.</li>
+                                </ul>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Юнит- и функциональное тестирование</div>
+                                <p>
+                                    Автоматизированное тестирование используют почти во всех проектах, хотя и в разном объёме. Если его правильно 
+                                    применять, оно делает разработку надёжнее и проще.
+                                </p>
+                                <ul>
+                                    <li>Типы тестирования, архитектурное устройство тестовых фреймворков, отличия, инструментарий.</li>
+                                    <li>Написание юнит-тестов при помощи Mocha и Sinon, для тестирования классов и функций.</li>
+                                    <li>Написание функциональных тестов HTTP-сервера для проверки полного цикла работы.</li>
+                                </ul>
+                                <p>
+                                    По окончанию этого занятия вы понимаете, как разрабатывать на Node.js, как делать сервер и правильно обрабатывать запросы, автоматически тестировать свой код.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Серверные фреймворки, Koa.js</div>
+                                <p>
+                                    Фреймворки облегчают написание приложений, за счет реализации типичных задач, стоящих перед разработчиком.
+                                </p>
+                                <ul>
+                                    <li>Принципы устройства широко распространённых фреймворков на Node.js: express.js и koa.js (новое поколение express).</li>
+                                    <li>Создаём простой сервер на koa.js.</li>
+                                    <li>Архитектура вложенных middleware, приём проектирования “цепочка обязанностей”.</li>
+                                </ul>
+                                <p>
+                                    Реализация основных задач:
+                                </p>
+                                <ul>
+                                    <li>Обработка запросов, роутинг.</li>
+                                    <li>Логирование.</li>
+                                    <li>Обработка ошибок.</li>
+                                    <li>Чтение больших POST-запросов.</li>
+                                    <li>Отдача статических файлов.</li>
+                                    <li>Конфигурация приложения в разных окружениях.</li>
+                                </ul>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Базы данных</div>
+                                <p>
+                                    Базы данных, такие как MongoDB, MySQL, Oracle и другие, хранят все данные нашего приложения: товары, 
+                                    пользователей и так далее, и позволяют быстро искать среди них.  Они используются почти во всех современных приложениях, исключая самые простые.
+                                </p>
+                                <ul>
+                                    <li>Общие принципы работы с базами данных:
+                                        <ul>
+                                            <li>NoSQL, используя Mongodb,</li>
+                                            <li>Поиск по тексту с морфологией на Elasticsearch</li>
+                                        </ul>
+                                    </li>
+                                    <li>Для проекта будем использовать mongodb, поэтому изучим ключевые особенности работы с этой базой.</li>
+                                    <li>Создание REST API для работы с пользователями при помощи MongoDB и Koa.js
+                                        <ul>
+                                            <li>ООП при помощи Mongoose: модели, запросы, схемы, валидация и плагины.</li>
+                                            <li>Создание, сохранение и поиск пользователей в базе.</li>
+                                            <li>Индексы для быстрого поиска.</li>
+                                            <li>Валидация, обработка ошибок</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Пользователи, авторизация</div>
+                                <p>
+                                    Авторизация для пользователей необходима практически в каждом приложении.
+                                </p>
+                                <ul>
+                                    <li>Принципы безопасного хранения паролей, использование криптографических алгоритмов для генерации хэшей.</li>
+                                    <li>Регистрация, вход и выход из приложения.</li>
+                                    <li>Пользовательские сессии (cookie для браузера, jwt для микросервисов).</li>
+                                    <li>
+                                        Использование библиотеки passport.js, которая предоставляет готовые модули авторизации. 
+                                        Создание и подключение OAuth 2.0 стратегий на примере социальной сети vkontakte (по желанию можем рассмотреть и другие).
+                                    </li>
+                                    <li>Создание серверной части для фронтенд-приложения:
+                                        <ul>Фронтенд-часть на React.js уже написана.
+                                            <li>Веб-сервисы для авторизации.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Улучшаем приложение</div>
+                                <ul>
+                                    <li>Шаблонизация (модуль pug).</li>
+                                    <li>Email: отправка, важные нюансы (внешние сервисы, защита от спама, инлайнинг стилей, картинки).</li>
+                                    <li>Архитектура сложных приложений:
+                                        <ul>
+                                            <li>Вложенный роутинг</li>
+                                            <li>Организация файлов и модулей проекта.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Интеграционное тестирование: написание скриптов, которые управляют браузером, позволяют автоматически открыть страницу, залогиниться, добавить товар в корзину и оплатить его.</li>
+                                </ul>
+                                <p>
+                                    После этого занятия вы умеете создавать сервер для SPA или обычного приложения с веб-сервисами, тестами, авторизацией.
+                                </p>
+                                <p>
+                                    При желании можно дописать к нему новые сервисы, архитектура и ваши навыки легко позволяют это.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Чаты, непрерывная подгрузка и обмен данными</div>
+                                <p>
+                                    Способы поддержки непрерывного соединения с сервером и получения новых данных: нужно для создания чата, онлайн-игр и других интерактивных приложений.
+                                </p>
+                                <ul>
+                                    <li>Основные приёмы и техники, их плюсы и недостатки, область применения: Long polling, Server Sent Events, Websockets.</li>
+                                    <li>Используем Websockets (при помощи socket.io) для непрерывных соединений.</li>
+                                    <li>Единая авторизация, интеграция websocket с приложением.</li>
+                                    <li>Реконнект, отслеживание состояния соединения.</li>
+                                    <li>Кластеризация при высоких нагрузках.</li>
+                                </ul>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Развёртывание и запуск приложения</div>
+                                <p>
+                                    На этом занятии мы обсудим важнейшие вопросы, касающиеся запуска и обновлений готового приложения на сервере, в “боевом” окружении.
+                                </p>
+                                <ul>
+                                    <li>Запуск и поддержание работы приложения.</li>
+                                    <li>Плавное обновление (рестарт без потери соединений и без даунтайма).</li>
+                                    <li>Миграции базы данных.</li>
+                                    <li>Мониторинг.</li>
+                                    <li>Менеджмент логов.</li>
+                                    <li>Примеры развёртывания:
+                                        <ul>
+                                            <li>Heroku с github-интеграцией</li>
+                                            <li>Тестирование с travis-ci</li>
+                                        </ul>
+                                    </li>
+                                    <li>Хранение и использование секретных ключей.</li>
+                                </ul>
+                                <p>
+                                    После этого занятия вы понимаете в деталях весь цикл разработки приложения: не только написания кода, но и релиза, организации логов и запуска на сервере.
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="steps__item-title">Занятие на дополнительные темы, нужные группе</div>
+                                <p>
+                                    Несмотря на то, что курс является наиболее полным и покрывает все основные темы, касающиеся разработки и запуска веб-приложений 
+                                    на Node.js - всё равно есть темы, которые не вошли в программу курса, но обсудить их хочется.
+                                </p>
+                                <p>
+                                    Это занятие отведено специально для них и строится целиком и полностью на ваших вопросах. Можем обсудить как чисто технические вопросы, 
+                                    например преимущества и недостатки микросервисной архитектуры или отличия протокола 
+                                    REST от GraphQL, так и нетехнические - например, из каких источников можно получать новую информацию.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textBlock infoScroll" id="project">
+                        <div class="subtitle">Курсовой проект</div>
+                        <p>Онлайн-магазин:</p>
+                        <ul>
+                            <li>С товарами в базе данных, сгруппированными по категориям.</li>
+                            <li>С возможностью поиска по товарам.</li>
+                            <li>С аутентификацией и регистрацией пользователей.</li>
+                            <li>С чатом поддержки.</li>
+                            <li>А также с отсылкой почты и другим функционалом, важным для реальных проектов.</li>
+                        </ul>
+                        <div class="textBlock__img">
+                            <img src="./image/course/txt1.jpeg" alt="">
+                            <img src="./image/course/txt2.jpeg" alt="">
+                            <img src="./image/course/txt3.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="textBlock infoScroll" id="requirements">
+                        <div class="subtitle">Предварительные требования</div>
+                        <div class="textBlock__ulCust">
+                            <div class="textBlock__ulCust-item js">
+                                Знание JavaScript, включая ООП, классы.
+                            </div>
+                            <div class="textBlock__ulCust-item code">
+                                Понимание браузерного JavaScript/HTML/CSS (клиентский код писать не понадобится, этот курс про серверный JS).
+                            </div>
+                            <div class="textBlock__ulCust-item browser">
+                                Интернет 256kb/s или быстрее для видео.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course__nav">
+                    <ul>
+                        <li data-scroll="#about" class="tabScroll active">О курсе</li>
+                        <li data-scroll="#steps" class="tabScroll">Как организовано обучение?</li>
+                        <li data-scroll="#steps2" class="tabScroll">Программа</li>
+                        <li data-scroll="#project" class="tabScroll">Курсовой проект</li>
+                        <li data-scroll="#requirements" class="tabScroll">Предварительные требования</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <a href="#"  class="logotype logotype--footer">edu<span>create</span></a>
+                </div>
+                <div class="footer__item">
+                    <nav class="nav nav--footer">
+                        <ul>
+                            <li>
+                                <a href="#">о нас</a></li>
+                            <li>
+                                <a href="#">блог</a></li>
+                            <li>
+                                <a href="#">контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__socials">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6.27828 9.78781L6.0136 13.5106C6.39228 13.5106 6.55629 13.3479 6.75296 13.1526L8.52831 11.4558L12.2071 14.1499C12.8818 14.5259 13.3572 14.3279 13.5392 13.5293L15.9539 2.2143L15.9545 2.21364C16.1685 1.21628 15.5939 0.826267 14.9365 1.07094L0.742804 6.50507C-0.225887 6.88108 -0.21122 7.4211 0.578133 7.66578L4.20689 8.7945L12.6358 3.52034C13.0324 3.25766 13.3932 3.403 13.0964 3.66568L6.27828 9.78781Z" fill="#8B8E9E"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6.26935 11.397L3.87831 13.8266C3.38848 14.3232 3.38848 15.1298 3.87831 15.6269C4.36763 16.1241 5.16072 16.1241 5.64952 15.6269L8.00038 13.2394L10.3492 15.6269C10.5941 15.8752 10.915 15.9995 11.236 15.9995C11.5564 15.9995 11.8768 15.8752 12.1217 15.6269C12.611 15.1298 12.611 14.3237 12.1222 13.8266L9.7309 11.397C10.6015 11.1954 11.4412 10.8449 12.2146 10.352C12.7999 9.97701 12.9757 9.1915 12.6069 8.59632C12.2392 8.00036 11.4658 7.82095 10.8795 8.1959C9.12847 9.31501 6.87281 9.31527 5.12079 8.1959C4.53448 7.82095 3.76136 8.00036 3.39283 8.59632C3.02406 9.19098 3.20038 9.97701 3.78567 10.352C4.55905 10.8455 5.39872 11.1954 6.26935 11.397Z" fill="#8B8E9E"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2881 4.12894C12.2881 6.40511 10.3697 8.25664 8.01093 8.25664C5.65162 8.25664 3.73377 6.40511 3.73377 4.12894C3.73377 1.85202 5.65162 0 8.01093 0C10.3697 0 12.2881 1.85202 12.2881 4.12894ZM6.24007 4.12915C6.24007 3.18647 7.03444 2.41992 8.01102 2.41992C8.98684 2.41992 9.78197 3.18647 9.78197 4.12915C9.78197 5.0711 8.98684 5.83814 8.01102 5.83814C7.03444 5.83814 6.24007 5.0711 6.24007 4.12915Z" fill="#8B8E9E"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8.71451 12.6C3.24792 12.6 0.129919 8.9964 0 3H2.73829C2.82823 7.4012 4.84692 9.26547 6.44592 9.64985V3H9.02441V6.7958C10.6034 6.63243 12.2622 4.9027 12.8218 3H15.4003C14.9705 5.34474 13.1717 7.07447 11.8925 7.78559C13.1717 8.36216 15.2205 9.87087 16 12.6H13.1617C12.5521 10.7742 11.0332 9.36156 9.02441 9.16937V12.6H8.71451Z" fill="#8B8E9E"/>
+                        </svg>
+                    </div>
+                    <p>© 2022—2023 EDUCREATE</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="authorize" class="modal modalRegist">
+        <div class="modal__title">Авторизация</div>
+        <form action="" class="form">
+            <label for="" class="form__label">Логин</label>
+            <input type="text" class="form__input" placeholder="Введите логин">
+            <label for="" class="form__label">Пароль</label>
+            <input type="text" class="form__input" placeholder="Введите пароль">
+            <button class="form__btn btn">Войти</button>
+        </form>
+        <div class="modal__notRegist">
+            Не зарегистрированы? <a href="#regist" id="toRegist" data-fancybox>Зарегистрироваться</a>
+        </div>
+    </div>
+    <div id="regist" class="modal modalRegist">
+        <div class="modal__title">Регистрация</div>
+        <form action="" class="form">
+            <label for="" class="form__label">Логин</label>
+            <input type="text" class="form__input" placeholder="Введите логин">
+            <label for="" class="form__label">Пароль</label>
+            <input type="text" class="form__input" placeholder="Введите пароль">
+            <label for="" class="form__label">Повторите пароль</label>
+            <input type="text" class="form__input" placeholder="Повторите пароль">
+            <button class="form__btn btn">Войти</button>
+        </form>
+        <div class="modal__notRegist">
+            Уже зарегистрированы? <a href="#authorize" id="toAuthorize" data-fancybox>Авторизация</a>
+        </div>
+    </div>
+<script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="./plugins/atuin.ru_demo_wow_wow.js"></script>
+<script src="./plugins/particles.js-master/demo/js/lib/stats.js"></script>
+<script src="./plugins/particles.js-master/particles.js"></script>
+<script src="./plugins/particles.js-master/demo/js/app.js"></script>
+<script src="./plugins/fancybox/fancybox.umd.js"></script>
+<script src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<script src="./script/script.js"></script>
+</body>
+</html>

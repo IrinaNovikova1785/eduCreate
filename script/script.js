@@ -98,6 +98,7 @@ function tabs(dataTab, dataInfo, className){
 
   targetMap1?.forEach(elem => {
       elem.addEventListener('click', function (e) {
+        console.log(1)
           e.preventDefault()
           let navText = elem.innerHTML;
           let accTitle = document.querySelector('.practicles__name');
@@ -134,6 +135,9 @@ if(document.querySelector('.userNav__wrapper')){
 if(document.querySelector('.test__question')){
   tabs('data-tabtest', 'data-infotest', 'test__question');
 }
+if(document.querySelector('.course__video')){
+  tabs('data-videoTab', 'data-videoInfo', 'course__video');
+}
 
 if(document.querySelector("[data-fancybox]")){
   Fancybox.bind("[data-fancybox]", {
@@ -166,7 +170,7 @@ if(basketBtn){
 let testTab = document.querySelectorAll('.test__tab');
 let testNext = document.querySelector('.test__next');
 
-if(testTab){
+if(testTab && testNext){
   let arrTab = Array.from(testTab);
   let currentTabIndex = 1;
   let clickedAllTabs = false;
@@ -185,10 +189,10 @@ if(testTab){
 }
 
 
-if(document.querySelector('.theory__anchors-item')){
+
+if(document.querySelector('[data-scroll]')){
   if(document.querySelector('[data-scroll]')){
-    $('.theory__anchors-item').click(function() {
-      console.log('click');
+    $('.tabScroll').click(function() {
       let scrollName = $(this).attr('data-scroll'),
         scrollElem = $(scrollName),
         scrollTop = scrollElem.offset().top - 80; 
@@ -198,8 +202,7 @@ if(document.querySelector('.theory__anchors-item')){
       }, 500);
     });
   } else{
-    $('.theory__anchors-item').click(function() {
-      console.log('click');
+    $('.tabScroll').click(function() {
       let scrollName = $(this).attr('data-scroll'),
         scrollElem = $(scrollName),
         scrollTop = scrollElem.offset().top; 
@@ -213,11 +216,11 @@ if(document.querySelector('.theory__anchors-item')){
   $(window).scroll(function() {
     let scrollDistance = $(window).scrollTop();
     
-    $('.theory__chapter').each(function() {
+    $('.infoScroll').each(function() {
       let elemTop = $(this).offset().top;
       let elemBottom = elemTop + $(this).outerHeight();
       let elementId = $(this).attr('id');
-      let correspondingTabItem = $('.theory__anchors-item[data-scroll="#'+elementId+'"]');
+      let correspondingTabItem = $('.tabScroll[data-scroll="#'+elementId+'"]');
   
       if (scrollDistance >= elemTop - 100 && scrollDistance <= elemBottom - 100) {
         correspondingTabItem.addClass('active');
@@ -227,7 +230,7 @@ if(document.querySelector('.theory__anchors-item')){
     });
   });
 } else{
-    let productTabItem = document.querySelectorAll('.product__tab-item');
+    let productTabItem = document.querySelectorAll('[data-scroll]');
 
     productTabItem.forEach((i) => {
       i.addEventListener('click', () => {

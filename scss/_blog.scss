@@ -4,6 +4,24 @@
         @include fluid(row-gap, 30px, 40px);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        &--grid{
+            .blog{
+                &__item{
+                    padding: 15px;
+                    background-color: #f7f4f3;
+                    &:nth-child(1), &:nth-child(5), &:nth-child(8){
+                        padding: 20px;
+                        grid-row: span 2;
+                        .blog__item-img{
+                            height: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navigation{
+        margin-top: 60px;
     }
     &__item{
         @include fluid(gap, 10px, 20px);

@@ -1,0 +1,32 @@
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    a{
+        @include fluid(font-size, 16px, 18px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        font-weight: 500;
+        transition: .38s ease-in-out;
+        &.active, &:hover{
+            background-color: #f5ece9;
+            
+        }
+    }
+    &__next, &__prev{
+        margin-left: 6px;
+        img{
+            object-fit: contain;
+            height: 10px;
+            width: 7px;
+            transition: .38s ease-in-out;
+        }
+    }
+    &__prev{
+        rotate: -180deg;
+    }
+}
