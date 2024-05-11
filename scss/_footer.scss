@@ -28,6 +28,9 @@
             @include fluid(height, 20px, 25px);
         }
     }
+    &--mt0{
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 420px) {

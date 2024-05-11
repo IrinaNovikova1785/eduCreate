@@ -68,7 +68,25 @@
         li{
             position: relative;
             padding-left: 15px;
+            p{
+                &:not(&:last-child){
+                    margin-bottom: 10px;
+                }
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 10px;
+                translate: 0 -50%;
+                width: 5px; 
+                height: 5px;
+                background-color: #222;
+            }
         }
+    }
+    a, li a{
+        color: #84a0ef;
     }
 }
 

@@ -40,6 +40,11 @@
     &__delete{
         object-fit: contain;
         height: 24px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(0) saturate(100%) invert(8%) sepia(93%) saturate(5378%) hue-rotate(351deg) brightness(113%) contrast(89%);
+        }
     }
     .btn{
         width: 100%;
